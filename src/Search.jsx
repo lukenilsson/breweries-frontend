@@ -1,36 +1,31 @@
-import { useState } from "react";
-import axios from "axios";
-
 export function Search() {
-  const [address, setAddress] = useState([]);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const params = new FormData(event);
-    axios.post("http://localhost:3000/breweries.json/?", params).then((response) => {
-      console.log(response.data);
-      setAddress(response.data);
-      event.target.reset();
-      window.location.href("#results");
-    });
+  const handleSubmit = () => {
+    console.log("Submitted");
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
       <div>
-        Address: <input type="text" />
+        <h1>Search</h1>
+        <p>Enter your start address</p>
       </div>
-      <div>
-        City: <input type="text" />
-      </div>
-      <div>
-        State: <input type="text" />
-      </div>
-      <div>
-        ZIP: <input type="number" />
-      </div>
-      <input type="submit" />
-      {/* On submit; pass the inputs into the query for mapping */}
-    </form>
+      <form onSubmit={handleSubmit}>
+        {/* This might not be formatted the way that's needed? May need to concatnate? */}
+        <div>
+          Address: <input type="text" />
+        </div>
+        <div>
+          City: <input type="text" />
+        </div>
+        <div>
+          State: <input type="text" />
+        </div>
+        <div>
+          ZIP: <input type="number" />
+        </div>
+        {/* On submit; pass the inputs into the query for mapping */}
+        <input type="submit" />
+      </form>
+    </div>
   );
 }

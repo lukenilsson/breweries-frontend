@@ -5,7 +5,6 @@ export function Content() {
   return (
     <div>
       <div id="search">
-        <h2>Some search mechanism</h2>
         <Search />
       </div>
       <div id="results">
