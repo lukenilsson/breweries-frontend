@@ -1,9 +1,20 @@
+import { Search } from "./Search";
+
 export function Content() {
   return (
     <div>
-      <h2>Some search mechanism</h2>
-      <h2>Results readout</h2>
-      <h2>A map if we have time for fancy</h2>
+      <div id="search">
+        <h2>Some search mechanism</h2>
+        <Search />
+      </div>
+      <div id="results">
+        <h2>Results readout</h2>
+        {/* Output should be 5 closest locations from the data set to the address query */}
+      </div>
+      <div id="map">
+        <h2>A map if we have time for fancy</h2>
+        {/* If we can export a map of the above output, let's embed here */}
+      </div>
     </div>
   );
 }
