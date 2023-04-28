@@ -1,9 +1,23 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { BreweriesIndex } from "./BreweriesIndex";
+
 export function Content() {
+  const [breweries, setBreweries] = useState([]);
+
+  const handleIndexBreweries = () => {
+    console.log("handleIndexBreweries");
+    axios.get("http://localhost:3000/breweries.json").then((response) => {
+      console.log(response.data);
+      setBreweries(response.data);
+    });
+  };
+
+  useEffect(handleIndexBreweries, []);
+
   return (
     <div>
-      <h2>Some search mechanism</h2>
-      <h2>Results readout</h2>
-      <h2>A map if we have time for fancy</h2>
+      <BreweriesIndex breweries={breweries} />
     </div>
   );
 }
