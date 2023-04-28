@@ -13,7 +13,10 @@ export function Content() {
     });
   };
 
-  useEffect(handleIndexBreweries, []);
+  useEffect(() => {
+    console.log("useEffect called");
+    handleIndexBreweries();
+  }, []);
 
   return (
     <div>

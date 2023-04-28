@@ -1,3 +1,48 @@
 html {
   scroll-behavior: smooth;
 }
+
+html, body {
+  background-color: blueviolet;
+  color: aliceblue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header-title {
+  background-color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 2rem;
+  color: black;
+  text-align: center;
+}
+.brew-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.brew-container {
+  background-color: whitesmoke;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 2rem;
+  color: black;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 1, 0.5);
+  margin-bottom: 1rem;
+}
+
+.brew-container:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.header button {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 2rem;
+}
+
+.header input {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 2rem;
+}
